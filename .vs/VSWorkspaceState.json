@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\src",
+    "\\nginx",
+    "\\server",
+    "\\worker"
+  ],
+  "SelectedNode": "\\nginx\\default.conf",
+  "PreviewInSolutionExplorer": false
+}
