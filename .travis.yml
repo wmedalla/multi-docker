@@ -9,16 +9,16 @@ scripts:
    - docker run -e CI=true wmedalla/react-test npm test
 
 after_success:
-   - docker build -t wmedalla/multi-client ./client
-   - docker build -t wmedalla/multi-nginx ./nginx
-   - docker build -t wmedalla/multi-server ./server
-   - docker build -t wmedalla/multi-worker ./worker
+   - docker build -t mechenek/multi-client ./client
+   - docker build -t mechenek/multi-nginx ./nginx
+   - docker build -t mechenek/multi-server ./server
+   - docker build -t mechenek/multi-worker ./worker
 
    #Login to docker CLI
    - echo $DOCKER_PASSWORD | docker login -u "$DOCKER_ID" --password-stdin
 
    # Push to docker hub
-   - docker push wmedalla/multi-client
-   - docker push wmedalla/multi-nginx
-   - docker push wmedalla/multi-server
-   - docker push wmedalla/multi-worker
+   - docker push mechenek/multi-client
+   - docker push mechenek/multi-nginx
+   - docker push mechenek/multi-server
+   - docker push mechenek/multi-worker
