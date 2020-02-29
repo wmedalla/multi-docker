@@ -14,14 +14,11 @@ after_success:
    - docker build -t wmedalla/multi-server ./server
    - docker build -t wmedalla/multi-worker ./worker
 
-#Login to docker CLI
-- echo $DOCKER_PASSWORD | docker login -u "$DOCKER_ID" --password-stdin
+   #Login to docker CLI
+   - echo $DOCKER_PASSWORD | docker login -u "$DOCKER_ID" --password-stdin
 
-# Push to docker hub
-- docker push wmedalla/multi-client
-- docker push wmedalla/multi-nginx
-- docker push wmedalla/multi-server
-- docker push wmedalla/multi-worker
-
-
-
+   # Push to docker hub
+   - docker push wmedalla/multi-client
+   - docker push wmedalla/multi-nginx
+   - docker push wmedalla/multi-server
+   - docker push wmedalla/multi-worker
