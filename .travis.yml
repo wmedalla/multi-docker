@@ -3,10 +3,10 @@ services:
    - docker
 
 before_install:
-   - docker build -t wmedalla/react-test -f ./client/Dockerfile.dev ./client
+   - docker build -t mechenek/react-test -f ./client/Dockerfile.dev ./client
 
 scripts:
-   - docker run -e CI=true wmedalla/react-test npm test
+   - docker run -e CI=true mechenek/react-test npm test
 
 after_success:
    - docker build -t mechenek/multi-client ./client
