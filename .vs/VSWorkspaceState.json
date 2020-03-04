@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\src",
-    "\\nginx",
-    "\\server",
-    "\\worker"
+    "\\client\\nginx",
+    "\\nginx"
   ],
-  "SelectedNode": "\\nginx\\default.conf",
+  "SelectedNode": "\\docker-compose.yml",
   "PreviewInSolutionExplorer": false
 }
