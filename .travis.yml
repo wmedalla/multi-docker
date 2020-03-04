@@ -24,6 +24,7 @@ after_success:
    - docker push mechenek/multi-worker
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
