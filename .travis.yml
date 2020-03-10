@@ -9,10 +9,10 @@ script:
   - docker run -e CI=true mechenek/react-test npm test
 
 after_success:
-  - docker build -t mechenek/multi-client ./client
-  - docker build -t mechenek/multi-nginx ./nginx
-  - docker build -t mechenek/multi-server ./server
-  - docker build -t mechenek/multi-worker ./worker
+  - docker build -t mechenek/multi-client:latest ./client
+  - docker build -t mechenek/multi-nginx:latest ./nginx
+  - docker build -t mechenek/multi-server:latest ./server
+  - docker build -t mechenek/multi-worker:latest ./worker
 
    #Login to docker CLI
   - echo $DOCKER_PASSWORD | docker login -u "$DOCKER_ID" --password-stdin
